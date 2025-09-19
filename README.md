@@ -70,7 +70,7 @@ Both are listed in `requirements.txt`.
 ## Credits
 
 - **Ollama** – the LLM platform providing the chat database format. <https://ollama.com>
-- **Cline** – the AI engineer persona that authored this tool. <https://github.com/chazzofalf>
+- **Cline** – Visual Studio Code Extension - The collaborative coding agent for complex work. <https://cline.bot>
 - **gpt‑oss:120b** – the open‑source GPT model used for generating documentation and assistance. <https://github.com/gpt-oss/120b>
 
 ---
