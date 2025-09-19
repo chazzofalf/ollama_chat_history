@@ -81,14 +81,14 @@ def main():
 
     print(f"Markdown file written: {md_filename}")
 
-    # Convert to PDF using the provided script
-    md2pdf_path = os.path.expanduser("~/.local/bin/md2pdf.sh")
-    if not os.path.isfile(md2pdf_path):
-        raise FileNotFoundError(f"md2pdf script not found at {md2pdf_path}")
+    # Convert to PDF using the md2pdf submodule script
+    md2pdf_script = os.path.join(os.path.dirname(__file__), "md2pdf", "md2pdf.py")
+    if not os.path.isfile(md2pdf_script):
+        raise FileNotFoundError(f"md2pdf script not found at {md2pdf_script}")
 
-    # Call the script
+    # Call the submodule script using the current Python interpreter
     try:
-        subprocess.run([md2pdf_path, md_filename], check=True)
+        subprocess.run([sys.executable, md2pdf_script, md_filename], check=True)
         print(f"PDF conversion completed for {md_filename}")
     except subprocess.CalledProcessError as e:
         print(f"Error during PDF conversion: {e}")
