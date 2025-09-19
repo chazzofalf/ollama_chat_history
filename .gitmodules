@@ -1,0 +1,3 @@
+[submodule "md2pdf"]
+	path = md2pdf
+	url = https://github.com/chazzofalf/md2pdf
